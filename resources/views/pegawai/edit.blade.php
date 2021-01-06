@@ -36,6 +36,7 @@
             <input class="form-control" id="nama" type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}">
         </div>
 
+
         <div class="form-group">
             <label for="nama">jabatan</label>
             <select id="jabatan" name="jabatan" class="form-control" >

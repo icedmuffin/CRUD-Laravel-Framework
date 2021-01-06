@@ -10,3 +10,17 @@
     <input type="submit" value="CARI">
 </form>
 <br/>
+
+
+<option value="{{ $n->pegawai_id }}"
+    @if($t->tugas_idpegawai==$n->pegawai_id) selected="selected"
+    @endif>{{ $n->pegawai_nama }}
+</option>
+
+
+
+// mengambil data tugas berdasarkan id yang dipilih
+$tugas = DB::table('tugas')->where('kodePegawai', $id)->get();
+
+// passing data tugas yang didapat ke view editTugas.blade.php
+return view('tugas.edit', ['kodePegawai' => $tugas]);

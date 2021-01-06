@@ -24,16 +24,17 @@
 
         <form action="http://localhost:8000/belajar_laravel/public/tugas/simpan" method="post">
             @csrf
-            {{---perbaiki--}}
 
             <div class="form-group">
+                <label for="tanggal">pegawai </label>
                 <select id="kodePegawai" name="kodePegawai" class="form-control" >
                     @foreach($pegawai as $n)
-                        <option value="{{ $n->pegawai_id}} ">{{ $n->pegawai_nama  }}</option>
+                        <option value="{{ $n->pegawai_id}} ">{{ $n->pegawai_nama  }} | {{$n->pegawai_id}}</option>
                      @endforeach
                 </select>
                 <br/>
             </div>
+
 
             <div class="form-group">
                 <label for="tanggal">Tanggal Tugas</label>

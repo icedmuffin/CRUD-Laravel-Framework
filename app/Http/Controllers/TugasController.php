@@ -21,7 +21,9 @@ class TugasController extends Controller
     // method untuk menampilkan view form tambah tugas
     public function tambah()
     {
+
         $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
         // memanggil view tambah
         return view('tugas.tambah', ['pegawai' => $pegawai]);
     }
@@ -44,12 +46,19 @@ class TugasController extends Controller
         return redirect('/tugas');
     }
 
+
+
+
+
     // method untuk edit data tugas
     public function edit($id)
     {
+
         // mengambil data tugas berdasarkan id yang dipilih
         $tugas = DB::table('tugas')->where('id', $id)->get();
         // passing data tugas yang didapat ke view editTugas.blade.php
+
+
         return view('tugas.edit', ['tugas' => $tugas]);
     }
 
@@ -65,6 +74,11 @@ class TugasController extends Controller
         // alihkan halaman ke halaman home
         return redirect('/tugas');
     }
+
+
+
+
+
 
     // method untuk hapus data pegawai
     public function hapus($id)

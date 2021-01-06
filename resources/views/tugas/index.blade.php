@@ -51,7 +51,7 @@
     <div class="container">
 
 
-        {{--nanti ganti ke tugas--}}
+
 
         <table class="table table-hover">
             <thead>
@@ -90,6 +90,5 @@
 	    {{ $tugas->links() }}
 
         </p>
-        {{--nanti ganti ke tugas--}}
     </div>
 @endsection
