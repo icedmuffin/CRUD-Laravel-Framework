@@ -1,5 +1,5 @@
 
-@extends('templateFinal')
+@extends('template')
 
 @section('judulHalaman')
 <title>tambah pegawai</title>

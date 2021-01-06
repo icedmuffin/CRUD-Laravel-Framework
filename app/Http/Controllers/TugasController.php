@@ -8,33 +8,38 @@ use Illuminate\Support\Facades\DB;
 class TugasController extends Controller
 {
     //mekanisme halaman awal
-    public function main()
+    public function index()
     {
         // mengambil data dari table home
         $tugas = DB::table('tugas')->paginate(10);
-
+        $pegawai = DB::table('pegawai')->get();
         // mengirim data tugas ke view home
-        return view('tugas', ['tugas' => $tugas]);
+        return view('tugas.index', ['tugas' => $tugas, 'pegawai' => $pegawai]);
     }
 
+    //updated
     // method untuk menampilkan view form tambah tugas
     public function tambah()
     {
-
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
         // memanggil view tambah
-        return view('tambahTugas');
+        return view('tugas.tambah', ['pegawai' => $pegawai]);
     }
 
+    //updated
     // method untuk insert data ke table tugas
     public function simpan(Request $request)
     {
+
         // insert data baru ke table tugas
         DB::table('tugas')->insert([
+
             'kodePegawai' => $request->kodePegawai,
             'tanggal' => $request->tanggal,
             'namaTugas' => $request->tugas,
             'status' => $request->status
         ]);
+
         // alihkan halaman ke halaman
         return redirect('/tugas');
     }
@@ -45,7 +50,7 @@ class TugasController extends Controller
         // mengambil data tugas berdasarkan id yang dipilih
         $tugas = DB::table('tugas')->where('id', $id)->get();
         // passing data tugas yang didapat ke view editTugas.blade.php
-        return view('editTugas', ['tugas' => $tugas]);
+        return view('tugas.edit', ['tugas' => $tugas]);
     }
 
     // update data tugas
@@ -83,6 +88,6 @@ class TugasController extends Controller
             ->paginate();
 
         // mengirim data pegawai ke view index
-        return view('tugas', ['tugas' => $hasil]);
+        return view('tugas.index', ['tugas' => $hasil]);
     }
 }

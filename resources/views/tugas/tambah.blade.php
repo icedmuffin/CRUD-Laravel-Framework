@@ -1,5 +1,5 @@
 
-@extends('templateFinal')
+@extends('template')
 
 @section('judulHalaman')
 <title>tambah tugas</title>
@@ -19,26 +19,22 @@
 
 	<a href="/tugas"> Kembali</a>
     <h3 style="text-align: center">Data Tugas Pegawai</h3>
-{{---
-	<form action="http://localhost:8000/belajar_laravel/public/tugas/simpan" method="post">
-        {{ csrf_field() }}
-		Nama <input type="text" name="id" required="required"> <br/>
-		Jabatan <input type="text" name="tanggal" required="required"> <br/>
-		Umur <input type="number" name="tugas" required="required"> <br/>
-		Alamat <textarea name="status" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
--}}
-    {{--protorype--}}
+
     <div class="container" style="padding : 0 10% 10% 10%">
 
         <form action="http://localhost:8000/belajar_laravel/public/tugas/simpan" method="post">
             @csrf
+            {{---perbaiki--}}
 
             <div class="form-group">
-                <label for="kodePegawai">ID Pegawai</label>
-                <input class="form-control" type="text" id="kodePegawai" name="kodePegawai" required="required" placeholder="ID pegawai">
+                <select id="kodePegawai" name="kodePegawai" class="form-control" >
+                    @foreach($pegawai as $n)
+                        <option value="{{ $n->pegawai_id}} ">{{ $n->pegawai_nama  }}</option>
+                     @endforeach
+                </select>
+                <br/>
             </div>
+
             <div class="form-group">
                 <label for="tanggal">Tanggal Tugas</label>
                 <input class="form-control" type="datetime-local" id="tanggal" name="tanggal" required="required" placeholder="Tanggal Tugas">

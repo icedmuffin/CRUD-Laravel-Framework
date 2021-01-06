@@ -8,21 +8,30 @@ use Illuminate\Support\Facades\DB;
 
 class PegawaiController extends Controller
 {
+    //update
     public function index()
     {
         // mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->paginate(10);
 
         // mengirim data pegawai ke view index
-        return view('index', ['pegawai' => $pegawai]);
+        return view('/pegawai.index', ['pegawai' => $pegawai]);
     }
 
-    // method untuk menampilkan view form tambah pegawai
+    //
     public function tambah()
     {
         $jabatan =  DB::table('jabatan')->get();
         // memanggil view tambah
-        return view('tambah', ['jabatan' => $jabatan]);
+        return view('pegawai.tambah', ['jabatan' => $jabatan]);
+    }
+
+    public function detail($id)
+    {
+        $pegawai =  DB::table('pegawai')->where('pegawai_id', $id)->get();
+        $tugas =  DB::table('tugas')->where('kodePegawai', $id)->get();
+        // memanggil view tambah
+        return view('/detail', ['pegawai' => $pegawai, 'tugas' => $tugas]);
     }
 
     // method untuk insert data ke table pegawai
@@ -48,7 +57,7 @@ class PegawaiController extends Controller
 
         $jabatan =  DB::table('jabatan')->get();
 
-        return view('edit', ['pegawai' => $pegawai, 'jabatan' => $jabatan]);
+        return view('pegawai.edit', ['pegawai' => $pegawai, 'jabatan' => $jabatan]);
     }
 
     // update data pegawai
@@ -86,6 +95,6 @@ class PegawaiController extends Controller
             ->paginate();
 
         // mengirim data pegawai ke view index
-        return view('index', ['pegawai' => $pegawai]);
+        return view('pegawai.index', ['pegawai' => $pegawai]);
     }
 }

@@ -1,5 +1,5 @@
 
-@extends('templateFinal')
+@extends('template')
 
 @section('judulHalaman')
 
@@ -59,6 +59,8 @@
                     <a href="http://localhost:8000/belajar_laravel/public/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
                     |
                     <a href="http://localhost:8000/belajar_laravel/public/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                    |
+                    <a href="http://localhost:8000/belajar_laravel/public/pegawai/detail/{{ $p->pegawai_id }}">Detail</a>
                 </td>
             </tr>
             @endforeach

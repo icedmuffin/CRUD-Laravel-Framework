@@ -1,4 +1,4 @@
-@extends('templateFinal')
+@extends('template')
 
 @section('judulHalaman')
 
@@ -23,6 +23,10 @@
          <label for="kodePegawai">ID Pegawai</label>
          <input class="form-control" type="number" id="kodePegawai" value="{{ $p->kodePegawai }}" name="kodePegawai" required="required" placeholder="ID pegawai">
    </div>
+
+   {{---prototype--}}
+
+    {{--prototype--}}
 
    <div class="form-group">
          <label for="tanggal">Tanggal Tugas</label>

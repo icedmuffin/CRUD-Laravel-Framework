@@ -1,6 +1,6 @@
 {{--blank page untuk template--}}
 
-@extends('templateFinal')
+@extends('template')
 
 @section('judulHalaman')
 
