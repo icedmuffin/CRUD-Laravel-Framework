@@ -81,12 +81,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                <?php $nama = "Johan" ; ?>
-                    Nama Saya <?php echo $nama ; ?><br>
-                    Nama Saya {{ $nama }}
+
                     Laravel
                 </div>
 
+                <div class="container">
+                    <?php $nama = "Naufal S. A. Sunandar" ; ?>
+                    Nama :  <?php echo $nama ; ?><br>
+                    {{---Nama : {{ $nama }} <br> --}}
+                    NRP : 05211940000104
+
+                </div>
+                <br>
+                <div class="links">
+                    <a href="http://localhost:8000/belajar_laravel/public/pegawai">Pegawai</a>
+                    <a href="http://localhost:8000/belajar_laravel/public/tugas">Tugas</a>
+                </div>
+                <br>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>

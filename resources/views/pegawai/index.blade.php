@@ -43,6 +43,7 @@
 
         <table class="table table-hover">
             <tr>
+                <th>ID</th>
                 <th>Nama</th>
                 <th>Jabatan</th>
                 <th>Umur</th>
@@ -51,6 +52,7 @@
             </tr>
             @foreach($pegawai as $p)
             <tr>
+                <td>{{$p->pegawai_id}}</td>
                 <td>{{ $p->pegawai_nama }}</td>
                 <td>{{ $p->pegawai_jabatan }}</td>
                 <td>{{ $p->pegawai_umur }}</td>

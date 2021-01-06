@@ -18,11 +18,11 @@
 
     @foreach ($pegawai as $p)
 
+    <h1 style="text-align: center">Detail Pegawai ID - {{$p->pegawai_id}}</h1>
 <p style="padding-bottom: 3%; padding-top:5%">
     Nama : {{$p -> pegawai_nama}} <br>
     jabatan :  {{$p -> pegawai_jabatan}}<br>
     umur : {{ $p -> pegawai_umur}}<br>
-    tugas : <br>
 </p>
     @endforeach
 
