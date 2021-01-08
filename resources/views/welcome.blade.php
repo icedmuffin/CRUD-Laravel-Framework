@@ -96,6 +96,7 @@
                 <div class="links">
                     <a href="http://localhost:8000/belajar_laravel/public/pegawai">Pegawai</a>
                     <a href="http://localhost:8000/belajar_laravel/public/tugas">Tugas</a>
+                    <a href="http://localhost:8000/belajar_laravel/public/Agen">Agen</a>
                 </div>
                 <br>
                 <div class="links">

@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            <label for="nama">jabatan</label>
+            <label for="jabatan">jabatan</label>
             <select id="jabatan" name="jabatan" class="form-control" >
                 @foreach($jabatan as $p)
                 <option value="{{ $p->jabatan }} ">{{ $p->jabatan  }}</option>
@@ -42,12 +42,12 @@
         </div>
 
         <div class="form-group">
-            <label for="nama">umur</label>
+            <label for="umur">umur</label>
             <input class="form-control" type="text" id="umur" name="umur" required="required" placeholder="umur">
         </div>
 
         <div class="form-group">
-            <label for="nama">alamat</label>
+            <label for="alamat">alamat</label>
             <textarea class="form-control" row="2" type="text" id="alamat" name="alamat" required="required" placeholder="alamat"></textarea>
         </div>
 

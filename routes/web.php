@@ -20,6 +20,11 @@ Route::get('/halo', function () {
     return view('coba');
 })->name('halo');
 
+//template default
+
+Route::get('def', function () {
+    return view('blankPage');
+})->name('def');
 
 
 //route coba coba
@@ -41,7 +46,7 @@ Route::get('/pegawai/detail/{id}', 'PegawaiController@detail');
 
 
 
-//Tabel Tugas
+//Tabel Tugas pegawai
 
 Route::get('/tugas', function () {
     return view('tugas');
@@ -55,8 +60,12 @@ Route::post('/tugas/update', 'TugasController@update');
 Route::get('/tugas/hapus/{id}', 'TugasController@hapus');
 Route::post('/tugas/cari', 'TugasController@cari');
 
-//template default
 
-Route::get('def', function () {
-    return view('blankPage');
-})->name('def');
+//agen
+Route::get('/agen', 'agenController@index');
+Route::get('/agen/tambah', 'agenController@tambah');
+Route::post('/agen/store', 'agenController@store');
+Route::get('/agen/edit/{id}', 'agenController@edit');
+Route::post('/agen/update', 'agenController@update');
+Route::get('/agen/hapus/{id}', 'agenController@hapus');
+Route::get('/agen/cari', 'agenController@cari');

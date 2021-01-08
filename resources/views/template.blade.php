@@ -77,13 +77,16 @@
                         <b><a class="nav-link biru" href="http://localhost:8000/belajar_laravel/public/pegawai">Pegawai</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link biru" href="http://localhost:8000/belajar_laravel/public/tugas">Table Tugas</a></b>
+                        <b><a class="nav-link biru" href="http://localhost:8000/belajar_laravel/public/tugas">Tugas</a></b>
+                    </li>
+                    <li class="nav-item">
+                        <b><a class="nav-link biru" href="http://localhost:8000/belajar_laravel/public/agen">Agen</a></b>
                     </li>
                     <li class="nav-item">
                         <b><a class="nav-link oren biru" href="#">Ujian Akhir Semester</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link biru" href="#">Github Repository</a></b>
+                        <b><a class="nav-link biru" href="https://github.com/icedmuffin">Github Repository</a></b>
                     </li>
 
                 </ul>

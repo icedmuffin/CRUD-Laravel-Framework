@@ -38,7 +38,7 @@
 
 
         <div class="form-group">
-            <label for="nama">jabatan</label>
+            <label for="jabatan">jabatan</label>
             <select id="jabatan" name="jabatan" class="form-control" >
                 @foreach($jabatan as $j)
                     <option value="{{ $j->jabatan }} "> {{ $j->jabatan }}</option>
@@ -47,12 +47,12 @@
         </div>
 
         <div class="form-group">
-            <label for="nama">umur</label>
+            <label for="umur">umur</label>
             <input class="form-control" type="number" required="required" id="umur" name="umur" value="{{ $p->pegawai_umur }}">
         </div>
 
         <div class="form-group">
-            <label for="nama">alamat</label>
+            <label for="alamat">alamat</label>
             <textarea class="form-control" row="2" type="text" required="required" id="alamat" name="alamat">{{ $p->pegawai_alamat }}</textarea>
         </div>
 
