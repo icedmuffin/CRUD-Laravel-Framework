@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Grand+Hotel|Google+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Grand+Hotel|Google+Sans|Potta+One">
+
+    {{--ini font--}}}
+
     <link rel="stylesheet" href="css/navbar.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -83,10 +86,10 @@
                         <b><a class="nav-link biru" href="http://localhost:8000/belajar_laravel/public/agen">Agen</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link oren biru" href="#">Ujian Akhir Semester</a></b>
+                        <b><a class="nav-link oren biru" href="http://localhost:8000/belajar_laravel/public/mahasiswa">Mahasiswa</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link biru" href="https://github.com/icedmuffin">Github Repository</a></b>
+                        <b><a class="nav-link biru" href="https://github.com/icedmuffin/05211940000104">Github Repository</a></b>
                     </li>
 
                 </ul>

@@ -17,7 +17,7 @@
 <div class="container" style="max-width: 60%">
 
 
-	<h3>Edit Pegawai</h3>
+	<h3>Edit Agen</h3>
 
 	<a href="http://localhost:8000/belajar_laravel/public/egen"> Kembali</a>
 

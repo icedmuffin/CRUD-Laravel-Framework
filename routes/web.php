@@ -69,3 +69,10 @@ Route::get('/agen/edit/{id}', 'agenController@edit');
 Route::post('/agen/update', 'agenController@update');
 Route::get('/agen/hapus/{id}', 'agenController@hapus');
 Route::get('/agen/cari', 'agenController@cari');
+
+
+//mahasiswa
+Route::get('/mahasiswa', 'mahasiswaController@index');
+Route::get('/mahasiswa/edit/{id}', 'mahasiswaController@edit');
+Route::post('/mahasiswa/update', 'mahasiswaController@update');
+Route::get('/mahasiswa/view/{id}', 'mahasiswaController@view');

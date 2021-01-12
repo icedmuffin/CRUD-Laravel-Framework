@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -81,7 +81,6 @@
 
             <div class="content">
                 <div class="title m-b-md">
-
                     Laravel
                 </div>
 
@@ -92,6 +91,8 @@
                     NRP : 05211940000104
 
                 </div>
+
+
                 <br>
                 <div class="links">
                     <a href="http://localhost:8000/belajar_laravel/public/pegawai">Pegawai</a>
